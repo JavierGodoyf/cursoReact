@@ -5,7 +5,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <ItemListContainer user={"Bienvenido CoderHouse User"} />
+      <ItemListContainer user={"Bienvenido CoderHouse-User"} />
     </>
   )
 }
