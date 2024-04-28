@@ -73,7 +73,7 @@ const products = [
 
 // Obtener productos
 const getProducts = new Promise((resolve, reject) => {
-    // Simulamos un retraso de red con setTimeout
+    // Simulamos retraso de red tipo API
     setTimeout(() => {
         resolve(products);
     }, 3000);

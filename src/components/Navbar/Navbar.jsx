@@ -12,7 +12,7 @@ function NavbarComp() {
                 <Container>
                     <Nav className=" bg-black bg-opacity-25 rounded-5">
                         <Nav.Link href="/">Inicio</Nav.Link>
-                        <Nav.Link href="/cateogry/café">Cafeteria</Nav.Link>
+                        <Nav.Link href="/category/café">Cafeteria</Nav.Link>
                         <Nav.Link href="/category/pastelería">Pasteleria</Nav.Link>
                     </Nav>
                     <Navbar.Brand href="/" className=''>
