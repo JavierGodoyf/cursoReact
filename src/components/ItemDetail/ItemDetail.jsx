@@ -1,10 +1,13 @@
 const ItemDetail = ({ product }) => {
     return (
-        <div>
-            <h1>{product.name}</h1>
-            <img src={product.image} />
-            <p>{product.description}</p>
-        </div>
+        <Card>
+            <Card.Header as="h5">{product.name}</Card.Header>
+            <Card.Body>
+                <Card.Img src={product.image} alt={product.name} />
+                <Card.Text>{product.description}</Card.Text>
+                <Button variant="primary">Go somewhere</Button>
+            </Card.Body>
+        </Card>
     )
 }
 export default ItemDetail
