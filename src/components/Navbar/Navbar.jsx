@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import "./navbar.css";
 import logo from "../../assets/img/logo.png";
 import CartWidget from '../CartWidget/CartWidget';
+import { Link } from "react-router-dom"
 function NavbarComp() {
     return (
         <>
