@@ -10,7 +10,6 @@ function ItemListContainer({ user }) {
     const { idCategory } = useParams();
 
     useEffect(() => {
-        // Simulamos la llamada a la API (reemplaza esto con tu lógica real)
         getProducts.then((data) => {
             if (idCategory) {
                 const newProducts = data.filter(
