@@ -26,7 +26,7 @@ function ItemDetail() {
                 <Col xs={12} md={6}>
                     <Card.Text>{product.description}</Card.Text>
                     <Link to={`/`}>
-                            <Button variant="primary">Volver a productos</Button>
+                            <Button variant="success">Volver a productos</Button>
                             </Link>
                 </Col>
             </Row>

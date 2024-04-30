@@ -34,7 +34,7 @@ function ItemListContainer({ saludo }) {
                         <Card.Body>
                             <Card.Title>{product.name}</Card.Title>
                             <Link to={`/product/${product.id}`}>
-                            <Button variant="primary">Ver detalles</Button>
+                            <Button variant="success">Ver detalles</Button>
                             </Link>
                         </Card.Body>
                     </Card>
