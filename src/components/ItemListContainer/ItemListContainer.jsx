@@ -33,7 +33,6 @@ function ItemListContainer({ saludo }) {
                         <Card.Img variant="top" src={product.image} alt={product.name} />
                         <Card.Body>
                             <Card.Title>{product.name}</Card.Title>
-                            <Card.Text>{product.description}</Card.Text>
                             <Link to={`/product/${product.id}`}>
                             <Button variant="primary">Ver detalles</Button>
                             </Link>

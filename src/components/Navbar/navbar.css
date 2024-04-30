@@ -1,13 +1,13 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
+    margin-inline:4rem;
 }
 
 .logo {
     width: 6rem;
-    margin-right: 1rem;}
+}
 .logoitem{
     margin-block: 0.6rem;
-    margin-inline: 2rem;
     color: white;
     font-weight: bold;
     text-decoration: none;

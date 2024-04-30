@@ -10,7 +10,7 @@ import { Row, Col } from 'react-bootstrap';
 function NavbarComp() {
     return (
         <>
-            <Navbar bg="success" data-bs-theme="dark">
+            <Navbar bg="success" data-bs-theme="dark" className='rounded-5 rounded-top-0'>
                 <Container>
                     <Nav className=" bg-black bg-opacity-25 rounded-5">
                     <Link to={`/`}>

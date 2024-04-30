@@ -15,7 +15,8 @@ function ItemDetail() {
     }, [idProd]);
 
     return product ? (
-        <Card>
+        <div className="d-flex flex-wrap justify-content-center">
+        <Card className="m-5 text-center"style={{ width: "50%" }}>
         <Card.Header as="h5">{product.name}</Card.Header>
         <Card.Body>
             <Row>
@@ -31,6 +32,7 @@ function ItemDetail() {
             </Row>
         </Card.Body>
     </Card>
+    </div>
     ) : <div>no se encontro producto</div>;
 }
 
