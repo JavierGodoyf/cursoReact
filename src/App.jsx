@@ -9,9 +9,9 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Routes>
-          <Route path='/' element={<ItemListContainer user="Bienvenido CoderUser" />} />
-          <Route path='/Category/:idCategory' element={<ItemListContainer user="Bienvenido CoderUser" />} />
-          <Route path='/product/:idProd' elemnt={<ItemDetail />} />
+          <Route path='/' element={<ItemListContainer saludo="Nuestros Productos" />} />
+          <Route path='/Category/:idCategory' element={<ItemListContainer saludo="Nuestros Productos" />} />
+          <Route path='/product/:idProd' element={<ItemDetail />} />
         </Routes>
       </BrowserRouter>
     </>

@@ -6,18 +6,30 @@ import "./navbar.css";
 import logo from "../../assets/img/logo.png";
 import CartWidget from '../CartWidget/CartWidget';
 import { Link } from "react-router-dom"
+import { Row, Col } from 'react-bootstrap';
 function NavbarComp() {
     return (
         <>
-            <Navbar bg="success" data-bs-theme="dark" className='rounded-5 rounded-top-0' >
+            <Navbar bg="success" data-bs-theme="dark">
                 <Container>
                     <Nav className=" bg-black bg-opacity-25 rounded-5">
-                        <Nav.Link href="/">Inicio</Nav.Link>
-                        <Nav.Link href="/category/café">Cafeteria</Nav.Link>
-                        <Nav.Link href="/category/pastelería">Pasteleria</Nav.Link>
+                    <Link to={`/`}>
+                        <p className='navitem'>Inicio</p>
+                    </Link>
+                    <Link to={'/category/café'}>
+                        <p className='navitem'>Cafeteria</p>
+                    </Link>
+                    <Link to={`/category/pastelería`}>
+                        <p className='navitem'>Pasteleria</p>
+                        </Link>
                     </Nav>
-                    <Navbar.Brand href="/" className=''>
-                        <img src={logo} alt="logo" className='logo' />Cafeteria MiauCafe</Navbar.Brand>
+                    <Link to={'/'}>
+    <Row className='align-items-center ms-3'>
+    <Col><h3 className='logoitem text-nowrap '>Cafeteria MiauCafe</h3></Col>
+        <Col><img src={logo} alt="logo" className='logo'/></Col>
+        
+    </Row>
+</Link>
                 </Container>
                 <CartWidget />
             </Navbar>

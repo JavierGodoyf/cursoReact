@@ -3,8 +3,8 @@ import { useParams } from "react-router-dom";
 import getProducts from "../../data/getProducts";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-
-function ItemListContainer({ user }) {
+import { Link } from "react-router-dom";
+function ItemListContainer({ saludo }) {
     const [products, setProducts] = useState([]);
     const [selectedCategory, setSelectedCategory] = useState(null); // Estado para la categoría seleccionada
     const { idCategory } = useParams();
@@ -25,17 +25,18 @@ function ItemListContainer({ user }) {
     }, [idCategory, selectedCategory]); // Incluye la categoría seleccionada en las dependencias
 
     return (
-        <div>
-            <h4>{user}</h4>
-            <h2 className="text-center">Lista de Productos</h2>
-            <div className="d-flex flex-wrap">
+        <div className="text-center">
+            <h3 className="my-3">{saludo}</h3>
+            <div className="d-flex flex-wrap justify-content-center">
                 {products.map((product) => (
                     <Card key={product.id} style={{ width: "18rem", margin: "1rem" }}>
                         <Card.Img variant="top" src={product.image} alt={product.name} />
                         <Card.Body>
                             <Card.Title>{product.name}</Card.Title>
                             <Card.Text>{product.description}</Card.Text>
+                            <Link to={`/product/${product.id}`}>
                             <Button variant="primary">Ver detalles</Button>
+                            </Link>
                         </Card.Body>
                     </Card>
                 ))}

@@ -4,17 +4,28 @@ body {
 
 .logo {
     width: 6rem;
-    margin-right: 1rem;
-
-}
-
-.nav-link {
+    margin-right: 1rem;}
+.logoitem{
+    margin-block: 0.6rem;
     margin-inline: 2rem;
     color: white;
     font-weight: bold;
+    text-decoration: none;
+    
 }
 
-.nav-link:hover {
+a{
+    text-decoration: none;
+}
+.navitem {
+    margin-block: 0.6rem;
+    margin-inline: 2rem;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navitem:hover {
     text-decoration-line: underline;
 }
 
