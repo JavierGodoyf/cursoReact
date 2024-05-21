@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { useCart } from '../CartContext/CartContext'; // Importa el contexto del carrito
+import { useCart } from '../CartContext/CartContext';
 import Button from 'react-bootstrap/Button'; // Importa el componente Button de React Bootstrap
 import Form from 'react-bootstrap/Form'; // Importa el componente Form de React Bootstrap
 import Swal from 'sweetalert2'; // Importa SweetAlert2 para mostrar alertas
 
 const Checkout = () => {
-    const { cart, removeItemFromCart, clearCart } = useCart(); // Obtiene el estado del carrito y las funciones para manipularlo
+    const { cart, removeItemFromCart, clearCart } = useCart();
     const [formData, setFormData] = useState({ // Estado local para el formulario de envío
         name: '',
         userDetails: '',
@@ -69,13 +69,13 @@ const Checkout = () => {
     return (
         <div className="container mt-4">
             <div className="row">
-                {cart.length === 0 ? ( // Si el carrito está vacío, muestra un mensaje
+                {cart.length === 0 ? (
                     <div className="col-md-12 text-center">
                         <h2>Carrito Vacío</h2>
                         <p>No hay productos en tu carrito.</p>
                     </div>
                 ) : (
-                    <> {/* Fragmento React para envolver varios elementos */}
+                    <>
                         <div className="col-md-5">
                             <h2>Resumen del Pedido</h2>
                             <ul className="list-group">
@@ -98,7 +98,7 @@ const Checkout = () => {
                         </div>
                         <div className="col-md-7">
                             <h2>Datos de Envío</h2>
-                            <Form onSubmit={handleSubmit}> {/* Formulario para ingresar datos de envío */}
+                            <Form onSubmit={handleSubmit}>
                                 <Form.Group controlId="formName">
                                     <Form.Label>Nombre completo</Form.Label>
                                     <Form.Control type="text" name="name" value={formData.name} onChange={handleFormChange} />

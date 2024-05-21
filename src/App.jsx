@@ -1,4 +1,4 @@
-import NavbarComp from "./components/Navbar/Navbar"; // Renombrado para evitar conflicto de nombres
+import NavbarComp from "./components/Navbar/Navbar";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import ItemDetail from "./components/ItemDetail/ItemDetail";
 import Checkout from "./components/Checkout/Checkout";
@@ -12,7 +12,7 @@ function App() {
         <Route path='/' element={<ItemListContainer saludo="Nuestros Productos" />} />
         <Route path='/category/:idCategory' element={<ItemListContainer saludo="Nuestros Productos" />} />
         <Route path='/product/:idProd' element={<ItemDetail />} />
-        <Route path='/checkout' element={<Checkout />} /> {/* Ruta para Checkout */}
+        <Route path='/checkout' element={<Checkout />} />
       </Routes>
     </BrowserRouter>
   );

@@ -1,13 +1,13 @@
 import { FaShoppingBasket } from "react-icons/fa";
-import { useCart } from '../CartContext/CartContext'; // Asegúrate de importar correctamente desde components
-import { useNavigate } from 'react-router-dom'; // Importa useNavigate
+import { useCart } from '../CartContext/CartContext';
+import { useNavigate } from 'react-router-dom';
 
 function CartWidget() {
     const { cartItemCount } = useCart();
-    const navigate = useNavigate(); // Hook para la navegación
+    const navigate = useNavigate();
 
     const handleCartClick = () => {
-        navigate('/checkout'); // Navega a la ruta de checkout
+        navigate('/checkout');
     };
 
     return (

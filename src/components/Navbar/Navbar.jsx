@@ -13,23 +13,23 @@ function NavbarComp() {
             <Navbar bg="success" data-bs-theme="dark" className='rounded-5 rounded-top-0'>
                 <Container>
                     <Nav className=" bg-black bg-opacity-25 rounded-5">
-                    <Link to={`/`}>
-                        <p className='navitem'>Inicio</p>
-                    </Link>
-                    <Link to={'/category/café'}>
-                        <p className='navitem'>Cafeteria</p>
-                    </Link>
-                    <Link to={`/category/pastelería`}>
-                        <p className='navitem'>Pasteleria</p>
+                        <Link to={`/`}>
+                            <p className='navitem'>Inicio</p>
+                        </Link>
+                        <Link to={'/category/café'}>
+                            <p className='navitem'>Cafeteria</p>
+                        </Link>
+                        <Link to={`/category/pastelería`}>
+                            <p className='navitem'>Pasteleria</p>
                         </Link>
                     </Nav>
                     <Link to={'/'}>
-    <Row className='align-items-center ms-3'>
-    <Col><h3 className='logoitem text-nowrap '>Cafeteria MiauCafe</h3></Col>
-        <Col><img src={logo} alt="logo" className='logo'/></Col>
-        
-    </Row>
-</Link>
+                        <Row className='align-items-center ms-3'>
+                            <Col><h3 className='logoitem text-nowrap '>Cafeteria MiauCafe</h3></Col>
+                            <Col><img src={logo} alt="logo" className='logo' /></Col>
+
+                        </Row>
+                    </Link>
                 </Container>
                 <CartWidget />
             </Navbar>

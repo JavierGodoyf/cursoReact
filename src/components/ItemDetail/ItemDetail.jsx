@@ -4,14 +4,14 @@ import { db } from "../../main";
 import { doc, getDoc } from "firebase/firestore";
 import { Card, Button, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import Swal from "sweetalert2"; // Importa SweetAlert
-import { useCart } from '../CartContext/CartContext'; // Importa el contexto del carrito
+import Swal from "sweetalert2";
+import { useCart } from '../CartContext/CartContext';
 
 function ItemDetail() {
     const { idProd } = useParams();
     const [product, setProduct] = useState(null);
-    const [quantity, setQuantity] = useState(1); // Estado local para la cantidad
-    const { addItemToCart } = useCart(); // Usa el contexto del carrito
+    const [quantity, setQuantity] = useState(1);
+    const { addItemToCart } = useCart();
 
     useEffect(() => {
         const fetchProduct = async () => {
@@ -42,7 +42,7 @@ function ItemDetail() {
     };
 
     const handleAddToCart = () => {
-        addItemToCart({ ...product, quantity }); // Agrega el producto al carrito
+        addItemToCart({ ...product, quantity });
         Swal.fire("Producto agregado al carrito", "¡Excelente elección!", "success");
     };
 
