@@ -1,8 +1,12 @@
-# React + Vite
+# Proyecto de Checkout en React para Coderhouse
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es un ecommerce de una cafeteria usando React. Fue desarrollado como parte del curso de React JS de Coderhouse. Permite a los usuarios agregar productos al carrito, ingresar datos de envío y realizar pedidos.
 
-Currently, two official plugins are available:
+## Tecnologías Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Vite
+- React JS
+- SweetAlerts
+- Bootstrap
+- Firebase (base de datos de productos)
+

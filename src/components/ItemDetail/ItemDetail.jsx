@@ -1,4 +1,3 @@
-// itemDetail.jsx
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { db } from "../../main";
@@ -6,11 +5,13 @@ import { doc, getDoc } from "firebase/firestore";
 import { Card, Button, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2"; // Importa SweetAlert
+import { useCart } from '../CartContext/CartContext'; // Importa el contexto del carrito
 
 function ItemDetail() {
     const { idProd } = useParams();
     const [product, setProduct] = useState(null);
     const [quantity, setQuantity] = useState(1); // Estado local para la cantidad
+    const { addItemToCart } = useCart(); // Usa el contexto del carrito
 
     useEffect(() => {
         const fetchProduct = async () => {
@@ -41,10 +42,7 @@ function ItemDetail() {
     };
 
     const handleAddToCart = () => {
-        // Lógica para agregar al carrito (puedes usar un estado global o contexto)
-        console.log(`Añadido ${quantity} ${product.name} al carrito`);
-
-        // Mostrar la alerta SweetAlert
+        addItemToCart({ ...product, quantity }); // Agrega el producto al carrito
         Swal.fire("Producto agregado al carrito", "¡Excelente elección!", "success");
     };
 
@@ -59,7 +57,7 @@ function ItemDetail() {
                         </Col>
                         <Col xs={12} md={6}>
                             <Card.Text>{product.description}</Card.Text>
-                            <Card.Text>Precio:{product.price} €</Card.Text>
+                            <Card.Text>Precio: {product.price} €</Card.Text>
                             <div>
                                 <Button variant="outline-secondary" onClick={handleDecrement}>-</Button>
                                 <span className="mx-2">{quantity}</span>
